@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shweta Singh | Data Science & CS Portfolio</title>
+  <meta name="description" content="Portfolio of Shweta Singh — CS Engineering student at LPU specializing in Data Science, Python, Power BI, and Machine Learning." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- CURSOR GLOW -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- PARTICLE CANVAS -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <span class="logo-bracket">&lt;</span>SS<span class="logo-bracket">/&gt;</span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home"           class="nav-link active">Home</a></li>
+      <li><a href="#about"          class="nav-link">About</a></li>
+      <li><a href="#skills"         class="nav-link">Skills</a></li>
+      <li><a href="#projects"       class="nav-link">Projects</a></li>
+      <li><a href="#certifications" class="nav-link">Certifications</a></li>
+      <li><a href="#education"      class="nav-link">Education</a></li>
+      <li><a href="#contact"        class="nav-link">Contact</a></li>
+    </ul>
+    <a href="resume.pdf" download="Shweta_Singh_Resume.pdf" class="btn-resume" id="resumeBtn">
+      <i class="fas fa-download"></i> Resume
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="home" class="section hero-section">
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="hero-greeting">👋 Hello, I'm</p>
+        <h1 class="hero-name" id="heroName">Shweta Singh</h1>
+        <div class="hero-typewriter">
+          <span class="typewriter-prefix">I'm a </span>
+          <span class="typewriter-text" id="typewriterText"></span>
+          <span class="typewriter-cursor">|</span>
+        </div>
+        <p class="hero-tagline">Turning data into decisions, one model at a time 🚀</p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary"><i class="fas fa-rocket"></i> View My Work</a>
+          <a href="#contact"  class="btn btn-outline"><i class="fas fa-envelope"></i> Contact Me</a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/shwetasingh05"         class="social-pill" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          <a href="https://linkedin.com/in/shwetasingh10"    class="social-pill" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          <a href="mailto:shwetaasingh1210@gmail.com"        class="social-pill"><i class="fas fa-envelope"></i> Email</a>
+        </div>
+      </div>
+      <div class="hero-image-container">
+        <div class="hero-image-ring"></div>
+        <div class="hero-image-ring ring-2"></div>
+        <div class="hero-avatar" id="heroAvatar">
+          <img src="shweta formal.jpg" alt="Shweta Singh" id="profileImg"
+               onerror="this.style.display='none'; document.getElementById('avatarFallback').style.display='flex';" />
+          <div class="avatar-fallback" id="avatarFallback">
+            <span class="avatar-initials">SS</span>
+          </div>
+        </div>
+        <div class="floating-badge badge-1"><i class="fas fa-chart-bar"></i> Data Science</div>
+        <div class="floating-badge badge-2"><i class="fas fa-trophy"></i> 4 Projects</div>
+        <div class="floating-badge badge-3"><i class="fas fa-star"></i> CGPA 7.24</div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll Down</span>
+      <div class="scroll-dot"></div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section about-section">
+    <div class="section-header reveal">
+      <span class="section-tag">Who Am I</span>
+      <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-image-wrap reveal">
+        <div class="about-img-glow"></div>
+        <div class="about-img-card">
+          <img src="shweta formal.jpg" alt="Shweta Singh"
+               onerror="this.parentElement.innerHTML='<div class=\'about-img-placeholder\'><span class=\'avatar-initials-lg\'>SS</span></div>'" />
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <span class="stat-number" data-target="4">0</span><span>+</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" data-target="5">0</span><span>+</span>
+            <span class="stat-label">Certs</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-text reveal">
+        <h3>A passionate <span class="gradient-text">Data Science</span> enthusiast turning raw data into real-world impact 📊</h3>
+        <p>
+          Hi! I'm <strong>Shweta Singh</strong>, a B.Tech Computer Science Engineering student at 
+          <strong>Lovely Professional University</strong>, specializing in <strong>Data Science, Machine Learning,</strong> and <strong>Predictive Analysis</strong>. 
+          I love uncovering hidden patterns in data and building meaningful, data-driven solutions.
+        </p>
+        <p>
+          Beyond coding, I'm passionate about community — I've successfully organized events like 
+          <strong>Chakravyuh CTF 2025</strong>, <strong>Trinetra 2025</strong>, and <strong>Code-A-Fest 2.0</strong>, 
+          demonstrating strong leadership and coordination skills. I ranked <strong>101 / 400+ teams</strong> at Gear Up Season 4!
+        </p>
+        <div class="about-tags">
+          <span class="tag">🎓 B.Tech CSE @ LPU</span>
+          <span class="tag">📊 Data Science</span>
+          <span class="tag">🤖 ML Enthusiast</span>
+          <span class="tag">📈 Power BI</span>
+          <span class="tag">🐍 Python Dev</span>
+          <span class="tag">🏆 Event Organizer</span>
+        </div>
+        <a href="resume.pdf" download="Shweta_Singh_Resume.pdf" class="btn btn-primary">
+          <i class="fas fa-download"></i> Download Resume
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="section skills-section">
+    <div class="section-header reveal">
+      <span class="section-tag">What I Know</span>
+      <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+    </div>
+    <div class="skills-container">
+
+      <div class="skills-category reveal">
+        <h3 class="category-title"><i class="fas fa-code"></i> Languages</h3>
+        <div class="skill-bubbles">
+          <div class="skill-bubble"><i class="fas fa-copyright"></i><span>C</span></div>
+          <div class="skill-bubble"><span class="cpp-icon">C++</span><span>C++</span></div>
+          <div class="skill-bubble"><i class="fab fa-python"></i><span>Python</span></div>
+          <div class="skill-bubble"><i class="fab fa-java"></i><span>Java</span></div>
+          <div class="skill-bubble"><i class="fab fa-html5"></i><span>HTML</span></div>
+          <div class="skill-bubble"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
+        </div>
+      </div>
+
+      <div class="skills-category reveal">
+        <h3 class="category-title"><i class="fas fa-tools"></i> Technologies & Tools</h3>
+        <div class="skill-bubbles">
+          <div class="skill-bubble"><i class="fas fa-file-excel"></i><span>MS Excel</span></div>
+          <div class="skill-bubble"><i class="fab fa-git-alt"></i><span>Git</span></div>
+          <div class="skill-bubble"><i class="fab fa-github"></i><span>GitHub</span></div>
+          <div class="skill-bubble"><i class="fab fa-ubuntu"></i><span>Ubuntu</span></div>
+          <div class="skill-bubble"><i class="fas fa-chart-pie"></i><span>Power BI</span></div>
+          <div class="skill-bubble"><i class="fas fa-book"></i><span>Jupyter</span></div>
+        </div>
+      </div>
+
+      <div class="skills-category reveal">
+        <h3 class="category-title"><i class="fas fa-brain"></i> Domain Skills</h3>
+        <div class="skill-bubbles">
+          <div class="skill-bubble"><i class="fas fa-project-diagram"></i><span>DSA</span></div>
+          <div class="skill-bubble"><i class="fas fa-chart-line"></i><span>Data Analysis</span></div>
+          <div class="skill-bubble"><i class="fas fa-search"></i><span>Problem-Solving</span></div>
+          <div class="skill-bubble"><i class="fas fa-robot"></i><span>Predictive Analysis</span></div>
+        </div>
+      </div>
+
+      <div class="skills-category reveal">
+        <h3 class="category-title"><i class="fas fa-users"></i> Soft Skills</h3>
+        <div class="skill-bubbles">
+          <div class="skill-bubble"><i class="fas fa-handshake"></i><span>Collaborative</span></div>
+          <div class="skill-bubble"><i class="fas fa-sync-alt"></i><span>Adaptability</span></div>
+          <div class="skill-bubble"><i class="fas fa-fire"></i><span>Consistent</span></div>
+          <div class="skill-bubble"><i class="fas fa-shield-alt"></i><span>Resilience</span></div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section projects-section">
+    <div class="section-header reveal">
+      <span class="section-tag">What I've Built</span>
+      <h2 class="section-title">My <span class="gradient-text">Projects</span></h2>
+    </div>
+    <div class="projects-grid">
+
+      <div class="project-card reveal" data-delay="0">
+        <div class="project-card-glow"></div>
+        <div class="project-emoji">📚</div>
+        <div class="project-tags-top">
+          <span class="project-tag">NLP</span>
+          <span class="project-tag">Flask</span>
+        </div>
+        <p class="project-date"><i class="fas fa-calendar"></i> Jan 2026 – Mar 2026</p>
+        <h3 class="project-title">Book Recommendation System</h3>
+        <p class="project-desc">
+          Built a content-based recommendation system using TF-IDF and Cosine Similarity on book metadata. 
+          Processed and analyzed text data (title, author, categories, description) to generate relevant recommendations. 
+          Developed a Flask-based web application with an interactive frontend.
+        </p>
+        <div class="project-tech">
+          <span>Python</span><span>NLP</span><span>Flask</span><span>JavaScript</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/shwetasingh05/AI-Book-Recommendation-System" target="_blank" rel="noopener noreferrer" class="project-link">
+            <i class="fab fa-github"></i> Repository
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-delay="150">
+        <div class="project-card-glow"></div>
+        <div class="project-emoji">🌫️</div>
+        <div class="project-tags-top">
+          <span class="project-tag">Data Science</span>
+          <span class="project-tag">ML</span>
+        </div>
+        <p class="project-date"><i class="fas fa-calendar"></i> Oct 2025 – Dec 2025</p>
+        <h3 class="project-title">Predictive Analysis on Air Quality</h3>
+        <p class="project-desc">
+          End-to-end analysis of multi-pollutant datasets using Pandas, NumPy, Scikit-learn, Matplotlib &amp; Seaborn. 
+          Built regression, classification, and clustering models to predict pollution levels and categorize air quality indices — 
+          delivering insights for environmental monitoring decisions.
+        </p>
+        <div class="project-tech">
+          <span>Python</span><span>Scikit-learn</span><span>Pandas</span><span>Jupyter</span><span>Seaborn</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/shwetasingh05/Predictive-Analysis-on-Air-Quality" target="_blank" rel="noopener noreferrer" class="project-link">
+            <i class="fab fa-github"></i> Repository
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-delay="300">
+        <div class="project-card-glow"></div>
+        <div class="project-emoji">🎌</div>
+        <div class="project-tags-top">
+          <span class="project-tag">Power BI</span>
+          <span class="project-tag">Recommender</span>
+        </div>
+        <p class="project-date"><i class="fas fa-calendar"></i> June 2025 – July 2025</p>
+        <h3 class="project-title">Anime Recommendation System</h3>
+        <p class="project-desc">
+          Hybrid recommendation engine combining content-based and collaborative filtering for personalized anime suggestions. 
+          Built an interactive Power BI dashboard visualizing user preferences, genre trends, and recommendation performance metrics.
+        </p>
+        <div class="project-tech">
+          <span>Power BI</span><span>Python</span><span>Collaborative Filtering</span><span>Data Viz</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/shwetasingh05/anime-recommendation-system" target="_blank" rel="noopener noreferrer" class="project-link">
+            <i class="fab fa-github"></i> Repository
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-delay="450">
+        <div class="project-card-glow"></div>
+        <div class="project-emoji">⚡</div>
+        <div class="project-tags-top">
+          <span class="project-tag">MS Excel</span>
+          <span class="project-tag">Dashboard</span>
+        </div>
+        <p class="project-date"><i class="fas fa-calendar"></i> Feb 2025 – Apr 2025</p>
+        <h3 class="project-title">Electric Vehicle Population Analysis</h3>
+        <p class="project-desc">
+          Analyzed public EV population data to study adoption trends, vehicle types, and regional patterns. 
+          Built an interactive Excel dashboard with pivot tables, slicers, charts &amp; maps for dynamic exploration — 
+          extracting insights on EV growth and top manufacturers.
+        </p>
+        <div class="project-tech">
+          <span>MS Excel</span><span>Pivot Tables</span><span>Data Analysis</span><span>Visualization</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/shwetasingh05/EV_Adoption_Trend_Analysis" target="_blank" rel="noopener noreferrer" class="project-link">
+            <i class="fab fa-github"></i> Repository
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== CERTIFICATIONS ===== -->
+  <section id="certifications" class="section certs-section">
+    <div class="section-header reveal">
+      <span class="section-tag">My Achievements</span>
+      <h2 class="section-title">Certifi<span class="gradient-text">cations</span></h2>
+    </div>
+    <div class="certs-grid">
+
+      <div class="cert-card reveal" data-delay="0">
+        <div class="cert-icon" style="background: linear-gradient(135deg, #6c5ce7, #a855f7);">
+          <i class="fas fa-brain"></i>
+        </div>
+        <div class="cert-ribbon">Verified ✓</div>
+        <h3 class="cert-title">Introduction to Machine Learning</h3>
+        <p class="cert-issuer"><i class="fas fa-university"></i> NPTEL</p>
+        <p class="cert-date"><i class="fas fa-calendar"></i> Oct 2025</p>
+        <a href="Introduction to Machine Learning.pdf" target="_blank" class="cert-link">View Certificate <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="cert-card reveal" data-delay="100">
+        <div class="cert-icon" style="background: linear-gradient(135deg, #f59e0b, #ef4444);">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <div class="cert-ribbon">Verified ✓</div>
+        <h3 class="cert-title">From Data to Insights: Hands-On Data Science</h3>
+        <p class="cert-issuer"><i class="fas fa-university"></i> LPU</p>
+        <p class="cert-date"><i class="fas fa-calendar"></i> July 2025 · Cert No. 407400</p>
+        <a href="FROM DATA TO INSIGHT certificate.pdf" target="_blank" class="cert-link">View Certificate <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="cert-card reveal" data-delay="200">
+        <div class="cert-icon" style="background: linear-gradient(135deg, #ef4444, #dc2626);">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <div class="cert-ribbon">Verified ✓</div>
+        <h3 class="cert-title">Cybersecurity &amp; Real-Time Project</h3>
+        <p class="cert-issuer"><i class="fas fa-building"></i> NullClass</p>
+        <p class="cert-date"><i class="fas fa-calendar"></i> June 2024</p>
+        <a href="https://nullclass.com/certificates/66709bd7631beabaa11860c3" target="_blank" class="cert-link">View Certificate <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="cert-card reveal" data-delay="300">
+        <div class="cert-icon" style="background: linear-gradient(135deg, #0ea5e9, #06b6d4);">
+          <i class="fab fa-python"></i>
+        </div>
+        <div class="cert-ribbon">Verified ✓</div>
+        <h3 class="cert-title">Python Industrial Training</h3>
+        <p class="cert-issuer"><i class="fas fa-building"></i> Code Sprint</p>
+        <p class="cert-date"><i class="fas fa-calendar"></i> Mar 2024</p>
+        <a href="code sprint certificate.pdf" target="_blank" class="cert-link">View Certificate <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="cert-card reveal" data-delay="400">
+        <div class="cert-icon" style="background: linear-gradient(135deg, #16a34a, #22c55e);">
+          <i class="fas fa-code"></i>
+        </div>
+        <div class="cert-ribbon">Verified ✓</div>
+        <h3 class="cert-title">Legacy Responsive Web Design V8</h3>
+        <p class="cert-issuer"><i class="fas fa-laptop-code"></i> freeCodeCamp</p>
+        <p class="cert-date"><i class="fas fa-calendar"></i> Nov 2023</p>
+        <a href="https://freecodecamp.org/certification/fcc1794f649-cad8-4ed0-a410-15505728e854/responsive-web-design" target="_blank" class="cert-link">View Certificate <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+    </div>
+
+    <!-- Achievements -->
+    <div class="achievements-section reveal">
+      <h3 class="achievements-title"><i class="fas fa-trophy"></i> Achievements</h3>
+      <div class="achievements-grid">
+        <div class="achievement-card">
+          <div class="achievement-icon">🏅</div>
+          <div class="achievement-body">
+            <h4>Rank 101 / 400+ Teams</h4>
+            <p>Gear Up Season 4 — 36-hour Smart India Hackathon</p>
+          </div>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-icon">🎯</div>
+          <div class="achievement-body">
+            <h4>Chakravyuh CTF 2025</h4>
+            <p>Successfully organized and conducted the cybersecurity CTF event</p>
+          </div>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-icon">🌟</div>
+          <div class="achievement-body">
+            <h4>Trinetra 2025</h4>
+            <p>Led event management, coordination &amp; leadership roles</p>
+          </div>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-icon">💻</div>
+          <div class="achievement-body">
+            <h4>Code-A-Fest 2.0 — 2024</h4>
+            <p>Organized competitive programming event showcasing technical &amp; leadership skills</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION ===== -->
+  <section id="education" class="section education-section">
+    <div class="section-header reveal">
+      <span class="section-tag">My Journey</span>
+      <h2 class="section-title">Edu<span class="gradient-text">cation</span></h2>
+    </div>
+    <div class="timeline">
+
+      <div class="timeline-item reveal" data-delay="0">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <div class="timeline-icon"><i class="fas fa-university"></i></div>
+            <div>
+              <span class="timeline-period">2023 – Present</span>
+              <span class="timeline-location"><i class="fas fa-map-marker-alt"></i> Phagwara, Punjab</span>
+            </div>
+          </div>
+          <h3 class="timeline-degree">B.Tech — Computer Science &amp; Engineering</h3>
+          <p class="timeline-institution">Lovely Professional University</p>
+          <div class="timeline-badge">CGPA: 7.24</div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal" data-delay="150">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <div class="timeline-icon"><i class="fas fa-school"></i></div>
+            <div>
+              <span class="timeline-period">2022 – 2023</span>
+              <span class="timeline-location"><i class="fas fa-map-marker-alt"></i> Pathankot, Punjab</span>
+            </div>
+          </div>
+          <h3 class="timeline-degree">12th — Science (PCM)</h3>
+          <p class="timeline-institution">Kendriya Vidyalaya No.1 AFS Pathankot</p>
+          <div class="timeline-badge">Percentage: 80.20%</div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal" data-delay="300">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <div class="timeline-icon"><i class="fas fa-book-open"></i></div>
+            <div>
+              <span class="timeline-period">2020 – 2021</span>
+              <span class="timeline-location"><i class="fas fa-map-marker-alt"></i> Jaisalmer, Rajasthan</span>
+            </div>
+          </div>
+          <h3 class="timeline-degree">10th</h3>
+          <p class="timeline-institution">Kendriya Vidyalaya No.1 AFS Jaisalmer</p>
+          <div class="timeline-badge">Percentage: 92.40%</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section contact-section">
+    <div class="section-header reveal">
+      <span class="section-tag">Get In Touch</span>
+      <h2 class="section-title">Contact <span class="gradient-text">Me</span></h2>
+    </div>
+    <div class="contact-grid">
+
+      <div class="contact-info reveal">
+        <h3>Let's connect &amp; build something <span class="gradient-text">amazing</span> together! 🚀</h3>
+        <p>Whether you have a project idea, internship opportunity, or just want to chat about data — my inbox is always open!</p>
+
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <span class="contact-label">Email</span>
+              <a href="mailto:shwetaasingh1210@gmail.com" class="contact-value">shwetaasingh1210@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <span class="contact-label">Phone</span>
+              <a href="tel:+919646649085" class="contact-value">+91 9646649085</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <span class="contact-label">Location</span>
+              <span class="contact-value">Siwan, Bihar 841226</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social Cards with Animations -->
+        <div class="social-links-contact">
+
+          <a href="https://github.com/shwetasingh05" target="_blank" class="social-card" id="sc-github">
+            <div class="social-card-icon github-icon"><i class="fab fa-github"></i></div>
+            <div class="social-card-info">
+              <span class="social-name">GitHub</span>
+              <span class="social-handle">@shwetasingh05</span>
+            </div>
+            <div class="social-arrow"><i class="fas fa-arrow-right"></i></div>
+          </a>
+
+          <a href="https://linkedin.com/in/shwetasingh10" target="_blank" class="social-card" id="sc-linkedin">
+            <div class="social-card-icon linkedin"><i class="fab fa-linkedin-in"></i></div>
+            <div class="social-card-info">
+              <span class="social-name">LinkedIn</span>
+              <span class="social-handle">@shwetasingh10</span>
+            </div>
+            <div class="social-arrow"><i class="fas fa-arrow-right"></i></div>
+          </a>
+
+          <a href="mailto:shwetaasingh1210@gmail.com" class="social-card" id="sc-gmail">
+            <div class="social-card-icon gmail-icon"><i class="fas fa-envelope"></i></div>
+            <div class="social-card-info">
+              <span class="social-name">Gmail</span>
+              <span class="social-handle">shwetaasingh1210@gmail.com</span>
+            </div>
+            <div class="social-arrow"><i class="fas fa-arrow-right"></i></div>
+          </a>
+
+        </div>
+      </div>
+
+      <div class="contact-form-wrap reveal">
+        <form class="contact-form" id="contactForm" onsubmit="handleFormSubmit(event)">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Let's collaborate on a data project!" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your idea..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+          <div class="form-success" id="formSuccess">
+            <i class="fas fa-check-circle"></i> Message sent! I'll reply soon ✨
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <span class="logo-bracket">&lt;</span>SS<span class="logo-bracket">/&gt;</span>
+      </div>
+      <p class="footer-tagline">Built with <span class="heart">❤️</span> by Shweta Singh</p>
+      <div class="footer-socials">
+        <a href="https://github.com/shwetasingh05"      target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/shwetasingh10" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:shwetaasingh1210@gmail.com"     title="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+      <p class="footer-copy">© 2025 Shweta Singh · Siwan, Bihar · All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
