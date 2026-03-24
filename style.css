@@ -388,7 +388,6 @@ input, textarea { font-family: inherit; }
   inset: -40px;
   animation-duration: 16s;
   animation-direction: reverse;
-  opacity: 0.4;
 }
 
 .hero-avatar {
